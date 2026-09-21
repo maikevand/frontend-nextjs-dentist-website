@@ -31,7 +31,7 @@ export default function Afspraak() {
                 <article className="card">
                     <h3>Online afspraken</h3>
                     <p>Wilt u een controle plannen of heeft u een klacht? U kunt eenvoudig een afspraak maken.</p>
-                    <Link href="/afspraken" className="link-button"> Maak een afspraak </Link>
+                    <Link href="/afspraken/maken" className="link-button"> Maak een afspraak </Link>
                 </article>
             </section>
         </main>
