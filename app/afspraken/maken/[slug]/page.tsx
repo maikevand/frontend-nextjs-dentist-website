@@ -1,20 +1,20 @@
-import { notFound } from "next/navigation";
+import {notFound} from "next/navigation";
 import SelectAppointment from "@/components/SelectAppointment";
 
 const treatments = [
-    { url: "controle", name: "Periodieke controle" },
-    { url: "bleken", name: "Tanden bleken" },
-    { url: "klacht", name: "Pijn of klacht" },
+    {url: "controle", name: "Periodieke controle"},
+    {url: "bleken", name: "Tanden bleken"},
+    {url: "klacht", name: "Pijn of klacht"},
 ];
 
-const times = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30" ];
+const times = ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30"];
 
 export default async function MakenPagina({
                                               params,
                                           }: {
-    params: Promise<{ slug: string}>
-                                          }) {
-    const { slug } = await params
+    params: Promise<{ slug: string }>
+}) {
+    const {slug} = await params
 
     const treatment = treatments.find(
         (treatment) => treatment.url === slug

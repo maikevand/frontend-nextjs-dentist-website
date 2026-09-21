@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Gaatjes() {
     return (
         <main className="page-container">
-            <Header icon="/logo.svg" title="Gaatjes" />
+            <Header icon="/logo.svg" title="Gaatjes"/>
 
             <section className="intro">
                 <h2>Heeft u last van een gaatje?</h2>

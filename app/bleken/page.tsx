@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 export default function Bleken() {
     return (
         <main className="page-container">
-            <Header icon="/logo.svg" title="Bleken" />
+            <Header icon="/logo.svg" title="Bleken"/>
 
             <section className="intro">
                 <h2>Een stralend witte glimlach</h2>

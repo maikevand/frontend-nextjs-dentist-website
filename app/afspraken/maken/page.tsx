@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Page() {
     return (
         <main className="page-container">
-            <Header icon="/logo.svg" title="Afspraak maken" />
+            <Header icon="/logo.svg" title="Afspraak maken"/>
 
             <section className="intro">
                 <h2>Plan uw afspraak</h2>
@@ -43,7 +43,8 @@ export default function Page() {
                 <article className="card">
                     <h3>Pijn of klacht</h3>
                     <p>
-                        Staat uw behandeling er niet tussen? Heeft u pijn of andere klachten die beoordeeld moeten worden? Neem dan contact met ons op. We helpen u graag verder.
+                        Staat uw behandeling er niet tussen? Heeft u pijn of andere klachten die beoordeeld moeten
+                        worden? Neem dan contact met ons op. We helpen u graag verder.
                     </p>
                     <Link href="/afspraken/maken/klacht" className="link-button">
                         Neem contact op
