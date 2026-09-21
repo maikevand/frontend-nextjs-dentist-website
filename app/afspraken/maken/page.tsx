@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function Page() {
     return (
@@ -21,9 +22,9 @@ export default function Page() {
                         tandvlees. We controleren of er gaatjes of andere problemen
                         zijn.
                     </p>
-                    <a href="#" className="link-button">
+                    <Link href="/afspraken/maken/controle" className="link-button">
                         Plan periodieke controle
-                    </a>
+                    </Link>
                 </article>
 
                 <article className="card">
@@ -32,9 +33,9 @@ export default function Page() {
                         Wilt u meer informatie of een afspraak maken voor het bleken
                         van uw tanden?
                     </p>
-                    <a href="#" className="link-button">
+                    <Link href="/afspraken/maken/bleken" className="link-button">
                         Maak bleekafspraak
-                    </a>
+                    </Link>
                 </article>
             </section>
 
@@ -44,9 +45,9 @@ export default function Page() {
                     <p>
                         Staat uw behandeling er niet tussen? Heeft u pijn of andere klachten die beoordeeld moeten worden? Neem dan contact met ons op. We helpen u graag verder.
                     </p>
-                    <a href="#" className="link-button">
+                    <Link href="/afspraken/maken/klacht" className="link-button">
                         Neem contact op
-                    </a>
+                    </Link>
                 </article>
             </section>
 
