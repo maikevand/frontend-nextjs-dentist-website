@@ -9,10 +9,10 @@ export default function Navigation() {
                 </div>
                 <div className="navigation-">
                     <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/gaatjes">Gaatjes</Link></li>
-            <li><Link href="/bleken">Bleken</Link></li>
-            <li><Link href="/afspraken" className="navigation-button">Afspraken</Link></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="/gaatjes">Gaatjes</Link></li>
+                        <li><Link href="/bleken">Bleken</Link></li>
+                        <li><Link href="/afspraken" className="navigation-button">Afspraken</Link></li>
                     </ul>
                 </div>
             </div>
