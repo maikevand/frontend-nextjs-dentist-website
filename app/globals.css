@@ -331,6 +331,11 @@ nav ul a:hover {
   max-width: 400px;
 }
 
+.calendar-grid .selected {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
 .calendar-grid span {
   padding: 10px;
   text-align: center;
@@ -347,7 +352,7 @@ nav ul a:hover {
   cursor: pointer;
 }
 
-.calendar-grid span:not(:nth-child(-n + 5)):hover {
+.calendar-grid span:not(:nth-child(-n + 5)):not(.selected):hover {
   background-color: var(--color-turquoise-pale);
 }
 
@@ -371,6 +376,11 @@ nav ul a:hover {
 .time-list button:hover {
   background-color: var(--color-primary);
   color: white;
+}
+
+.time-list .selected {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
