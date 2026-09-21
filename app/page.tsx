@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -13,9 +14,7 @@ export default function Home() {
                             Welkom bij Tandartspraktijk de Tandenborstel. Wij zorgen ervoor
                             dat uw gebit gezond, sterk en stralend blijft.
                         </p>
-                        <a href="#" className="link-button">
-                            Maak een afspraak
-                        </a>
+                        <Link href="/afspraken" className="link-button">Maak een afspraak</Link>
                     </div>
                 </section>
 
