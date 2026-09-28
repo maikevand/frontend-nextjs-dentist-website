@@ -4,7 +4,10 @@ import SelectAppointment from "@/components/SelectAppointment";
 const times = ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30"];
 
 async function getTreatment() {
-    const res = await fetch("http://localhost:3000/api/behandelingen/")
+    // force-cache, omdat de behandelingen zelden wijzigen, dus niet nodig om deze info telkens opnieuw op te halen
+    const res = await fetch("http://localhost:3000/api/behandelingen/", {
+        cache: "force-cache"
+    })
     return await res.json();
 }
 

@@ -20,7 +20,10 @@ export default function SelectAppointment({times, slug}: { times: string[], slug
         setDate(day);
         const dayAsString = day.toString().padStart(2, "0");
         const selectedDate = `2026-09-${dayAsString}`;
-        const res = await fetch(`/api/tijden?behandeling=${slug}&datum=${selectedDate}`);
+        const res = await fetch(`/api/tijden?behandeling=${slug}&datum=${selectedDate}`, {
+            cache: "no-store"
+        });
+        // no-store, omdat je dan altijd de meest actuele tijdstippen ziet en de kans kleiner is dat een tijdstip getoond wordt dat net door iemand anders is gereserveerd.
         const data = await res.json();
         setAvailableTimes(data.tijden);
         setIsLoading(false);
