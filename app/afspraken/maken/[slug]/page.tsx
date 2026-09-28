@@ -32,7 +32,7 @@ export default async function MakenPagina({
                 <h2>Behandeling: {treatment.name}</h2>
                 <p> U wilt een afspraak maken voor de behandeling <strong> {treatment.name} </strong>.</p>
             </section>
-            <SelectAppointment times={times}/>
+            <SelectAppointment times={times} slug={slug}/>
         </main>
     );
 }

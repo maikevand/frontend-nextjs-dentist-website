@@ -1,13 +1,22 @@
 'use client'
 import {useState} from "react";
 
-export default function SelectAppointment({times}: { times: string[] }) {
+export default function SelectAppointment({times, slug}: { times: string[], slug: string }) {
 
     const [date, setDate] = useState<number | null>(null);
     const [selectedTime, setSelectedTime] = useState<string | null>(null);
+    const [availableTimes, setAvailableTimes] = useState<string[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    function handleDateClick(day: number) {
+    async function handleDateClick(day: number) {
+        setIsLoading(true)
         setDate(day);
+        const dayAsString = day.toString().padStart(2, "0");
+        const selectedDate = `2026-09-${dayAsString}`;
+        const res = await fetch(`/api/tijden?behandeling=${slug}&datum=${selectedDate}`);
+        const data = await res.json();
+        setAvailableTimes(data.tijden);
+        setIsLoading(false);
     }
 
     function handleTimeClick(time: string) {
@@ -35,12 +44,16 @@ export default function SelectAppointment({times}: { times: string[] }) {
                 {date && selectedTime && (
                     <h2>U heeft gekozen voor {date} september om {selectedTime}.</h2>
                 )}
+                {isLoading
+                ? "Tijdstippen worden geladen"
+                : (
                 <div className="time-list">
-                    {times.map((time) => (
-                        <button className={time === selectedTime ? "selected" : ""}
-                                onClick={() => handleTimeClick(time)} key={time}>{time}</button>
+                    {availableTimes.map((availableTime) => (
+                        <button className={availableTime === selectedTime ? "selected" : ""}
+                                onClick={() => handleTimeClick(availableTime)} key={availableTime}>{availableTime}</button>
                     ))}
                 </div>
+                    )}
             </article>
         </section>
     );
