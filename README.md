@@ -1,5 +1,14 @@
 # Opdrachtbeschrijving
 
+## Antwoorden op opdracht 7
+De gemaakte afspraken zijn verdwenen als de development-server wordt herstart, omdat de data tijdelijk draait en nergens opgeslagen wordt.
+
+Je zou niet willen dat data zoals getAfspraken() client-side staat, omdat dit een beveiligingsrisico vormt. 
+Je wil niet dat iemand via de browser de afspraken/gegevens van anderen kan zien.
+Ook wil je niet het risico lopen dat iemand ongewenste wijzigingen aan zou brengen.
+
+Er zou een database moeten zijn waarin nieuwe afspraken worden opgeslagen en eerdere afspraken opgehaald kunnen worden.
+
 ## Inleiding
 In deze opdracht ga je een bestaande Next.js-applicatie met Typescript verder uitbouwen voor Tandartspraktijk de
 Tandenborstel. Die herken je misschien nog wel! Je gaat onder andere werken met routing, nested routes, dynamic routes en Client Components.
