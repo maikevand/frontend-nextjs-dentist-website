@@ -1,11 +1,11 @@
-import Image, { ImageProps } from "next/image";
+import Image, {ImageProps} from "next/image";
 
 type HeaderProps = {
     icon: ImageProps["src"];
     title: string;
 };
 
-export default function Header({ icon, title }: HeaderProps) {
+export default function Header({icon, title}: HeaderProps) {
     return (
         <header className="header">
             <Image

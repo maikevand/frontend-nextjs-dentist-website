@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Navigation() {
+    const paths = ["Gaatjes", "Bleken", "Afspraken"]
     return (
         <nav>
             <div className="navigation-container">
@@ -9,10 +10,10 @@ export default function Navigation() {
                 </div>
                 <div className="navigation-">
                     <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/gaatjes">Gaatjes</Link></li>
-            <li><Link href="/bleken">Bleken</Link></li>
-            <li><Link href="/afspraken" className="navigation-button">Afspraken</Link></li>
+                        <li><Link href="/">Home</Link></li>
+                        {paths.map((path) => {
+                            return <li key={path}><Link href={`/${path.toLowerCase()}`}>{path}</Link></li>
+                        })}
                     </ul>
                 </div>
             </div>
