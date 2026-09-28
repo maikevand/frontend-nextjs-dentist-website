@@ -21,7 +21,7 @@ export function isTijdBezet(behandeling: string, datum: string, tijd: string): b
 }
 
 export function voegAfspraakToe(afspraak: Omit<Afspraak, "id">): Afspraak {
-    const nieuw = { id: nextId++, ...afspraak };
+    const nieuw = {id: nextId++, ...afspraak};
     afspraken.push(nieuw);
     return nieuw;
 }

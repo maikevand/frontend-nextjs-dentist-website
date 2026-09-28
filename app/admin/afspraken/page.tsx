@@ -23,7 +23,7 @@ export default async function AfsprakenPagina({
                 </tr>
                 </thead>
                 <tbody>
-                {afspraken.map ((afspraak) => (
+                {afspraken.map((afspraak) => (
                     <tr key={afspraak.id}>
                         <td>{afspraak.naam}</td>
                         <td>{afspraak.email}</td>
